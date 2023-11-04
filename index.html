@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/assets/images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/main.css">
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+    <!-- class="hidden bg-white flex flex-col md:flex-row-reverse justify-center items-center md:mx-5 md:rounded-xl max-w-screen-md font-sans content" -->
+    <div id="content" >
+        <div class="bg-white md:flex md:flex-row-reverse md:justify-center md:items-center md:mx-5 md:rounded-xl max-w-screen-md font-sans min-h-screen md:min-h-0 " >
+            <div class="md:basis-[40%]  md:py-3 ">
+                <img src="/assets/images/illustration-sign-up-mobile.svg" alt="Mobile Illustration" class=" md:hidden block w-full " >
+                <img src="/assets/images/illustration-sign-up-desktop.svg" alt="Desktop Illustration" class=" hidden md:block w-full ">
+            </div>
+            <div class="mx-5 md:basis-[50%]">
+                <h1 class="text-3xl md:text-5xl font-700 text-darkSlateGrey mt-5">Stay updated!</h1>
+                <p class="mt-4">Join 60,000+ product managers receiving monthly updates on:</p>
+                <ul class="space-y-3 mt-4">
+                    <li class="flex items-start gap-3">
+                        <img src="/assets/images/icon-list.svg" alt="" >
+                        <span>Product discovery and building what matters</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <img src="/assets/images/icon-list.svg" alt="" >
+                        <span>Measuring to ensure updates are a success</span>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <img src="/assets/images/icon-list.svg" alt="" >
+                        <span>And much more!</span>
+                    </li>
+                </ul>
+                <form action="#" id="newsletter-form"  class="flex flex-col md:mr-7">
+                    <div class="flex items-center justify-between mt-5">
+                        <label for="mail" class="font-700 text-neutral-dark-slate-grey ">Email Address:</label>
+                        <span class="error" id="email-error"></span>
+                    </div>
+                    <input type="email" id="mail" name="email"  placeholder="email@company.com" class=" border rounded-md border-CharcoalGrey focus:outline-none py-2 px-3 mt-2 ">
+                    
+                    <button type="submit" class=" text-white  bg-charcoalGrey hover:bg-tomato  py-2 rounded-md  hover:bg-primary-tomato hover:shadow-2xl hover:shadow-tomato/50 mt-5 mb-5 ">Subscribe to monthly newsletter</button>
+                </form>
+            </div>      
+        </div>
+    </div>
+
+    <!--Success Message-->
+    
+    <div id="success" class="hidden">
+        <!-- <div class="fixed bg-white md:w-[400px]  px-6 md:px-10  md:rounded-xl font-sans min-h-screen md:min-h-0 flex flex-col justify-between">
+            <div class="mt-16 md:mt-7">
+                <img src="/assets/images/icon-list.svg" alt="" class="w-9">
+                <h2 class="text-4xl my-4 font-700">Thanks For Subscribing!</h2>
+                <p>A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.</p>
+            </div>
+                         
+        </div>
+        <button id="dismissBtn" class="text-white bg-darkSlateGrey px-3 hover:bg-tomato hover:shadow-2xl hover:shadow-tomato py-2 rounded-md md:mt-6 mb-5 md:mb-7 w-full">Dismiss message</button> -->
+    </div>
+    
+    
+    <script src="/js/script.js" ></script>
+</body>
+</html>
