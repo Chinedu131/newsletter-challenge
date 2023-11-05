@@ -4,35 +4,41 @@ const errorMessage = document.getElementById('email-error');
 const content = document.querySelector('#content');
 const success = document.getElementById('success');
 const dismissBtn = success.querySelector('#dismissBtn');
+let emailIsValid = false; // Added to track email validity
 
-
-
-email.addEventListener('input', ()=>{
-    if(email.validity.valid) {
-        errorMessage.textContent='';
-        errorMessage.className='error';
-        email.style.border = '1px solid green'; //set the border to green on valid input
-        email.style.color = ''; // reset text color
-        email.style.backgroundColor = ''; 
-        
+email.addEventListener('input', () => {
+    if(email.validity.valid){
+        if(!emailIsValid){
+            email.style.border = '1px solid green'; //set the border to green on valid input
+            emailIsValid = true;
+        }
+        errorMessage.textContent = '';
+        errorMessage.className = 'error';
+        email.style.color = ''; //reset text color
+        email.style.backgroundColor = '';
     }else{
+        emailIsValid = false; // Reset email Validity
         showError();
     }
-});
+})
+
+
 
 form.addEventListener('submit', (e) => {
+    e.preventDefault(); //prevent the form from submitting by default
+
     if (email.value.trim() === '' || !email.validity.valid) {
         errorMessage.textContent = 'please enter your email';
         showError();
-        e.preventDefault();
+        
     }else{
         showSuccess(email.value);
         content.style.display = 'none';
         success.style.display = "block";
-        
-       
+ 
     }
 });
+
 
 
 function showError() {
@@ -59,14 +65,14 @@ function showSuccess(userEmail) {
         <h2 class="text-4xl my-4 font-700">Thanks For Subscribing!</h2>
         <p>A confirmation email has been sent to <b>${userEmail}</b> Please open it and click the button inside to confirm your subscription.</p>
     </div>
-    <button id="dismissBtn" class="text-white bg-darkSlateGrey px-3 hover:bg-tomato hover:shadow-2xl hover:shadow-tomato py-2 rounded-md md:mt-6 mb-5 md:mb-7 w-full">Dismiss message</button>             
+    <button id="dismissBtn" class="text-white bg-darkSlateGrey px-3 transition ease-in-out duration-300 hover:bg-tomato hover:shadow-2xl hover:shadow-tomato py-2 rounded-md md:mt-6 mb-5 md:mb-7 w-full">Dismiss message</button>             
 </div>`;
 
 // Reassign the dismissBtn variable to the new button within the success message
-dismissB = success.querySelector('#dismissBtn');
+const dismissBtn = success.querySelector('#dismissBtn');
 
 // Attach the event listener to the new dismissBtn
-dismissB.addEventListener('click', function () {
+dismissBtn.addEventListener('click', function () {
     success.style.display = 'none';
 });
 };

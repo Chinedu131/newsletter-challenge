@@ -8,16 +8,15 @@
     <title>Frontend Mentor | Newsletter sign-up form with success message</title>
 </head>
 <body>
-    <!-- class="hidden bg-white flex flex-col md:flex-row-reverse justify-center items-center md:mx-5 md:rounded-xl max-w-screen-md font-sans content" -->
     <div id="content" >
-        <div class="bg-white md:flex md:flex-row-reverse md:justify-center md:items-center md:mx-5 md:rounded-xl max-w-screen-md font-sans min-h-screen md:min-h-0 " >
+        <div class="bg-white md:flex md:flex-row-reverse md:justify-center md:items-center md:mx-5 md:rounded-xl max-w-screen-xl font-sans min-h-screen md:min-h-0 shadow-2xl" >
             <div class="md:basis-[40%]  md:py-3 ">
                 <img src="/assets/images/illustration-sign-up-mobile.svg" alt="Mobile Illustration" class=" md:hidden block w-full " >
                 <img src="/assets/images/illustration-sign-up-desktop.svg" alt="Desktop Illustration" class=" hidden md:block w-full ">
             </div>
             <div class="mx-5 md:basis-[50%]">
                 <h1 class="text-3xl md:text-5xl font-700 text-darkSlateGrey mt-5">Stay updated!</h1>
-                <p class="mt-4">Join 60,000+ product managers receiving monthly updates on:</p>
+                <p class="mt-4 ">Join 60,000+ product managers receiving monthly updates on:</p>
                 <ul class="space-y-3 mt-4">
                     <li class="flex items-start gap-3">
                         <img src="/assets/images/icon-list.svg" alt="" >
@@ -39,7 +38,10 @@
                     </div>
                     <input type="email" id="mail" name="email"  placeholder="email@company.com" class=" border rounded-md border-CharcoalGrey focus:outline-none py-2 px-3 mt-2 ">
                     
-                    <button type="submit" class=" text-white  bg-charcoalGrey hover:bg-tomato  py-2 rounded-md  hover:bg-primary-tomato hover:shadow-2xl hover:shadow-tomato/50 mt-5 mb-5 ">Subscribe to monthly newsletter</button>
+                    <button type="submit" class="text-white bg-charcoalGrey py-2 rounded-md hover:bg-tomato hover:shadow-2xl hover:shadow-tomato/50 transition duration-300 ease-in-out mt-5 mb-5">
+                        Subscribe to monthly newsletter
+                    </button>
+                      
                 </form>
             </div>      
         </div>
